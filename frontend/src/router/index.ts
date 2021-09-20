@@ -18,6 +18,7 @@ const routes: Array<RouteConfig> = [
     component: About
   },
   {
+    // 404ルーティング追加
     path: '*',
     name: 'NotFound',
     component: NotFound
