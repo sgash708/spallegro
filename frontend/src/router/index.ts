@@ -8,11 +8,13 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
+    // TOPページ
     path: '/',
     name: 'Home',
     component: Home
   },
   {
+    // サービスについて
     path: '/about',
     name: 'About',
     component: About
