@@ -3,6 +3,8 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import NotFound from '@/views/NotFound.vue'
+import Interval from '@/views/Interval.vue'
+import Note from '@/views/Note.vue'
 
 Vue.use(VueRouter)
 
@@ -20,7 +22,19 @@ const routes: Array<RouteConfig> = [
     component: About
   },
   {
-    // 404ルーティング追加
+    // インターバル
+    path: '/interval',
+    name: 'Interval',
+    component: Interval
+  },
+  {
+    // インターバル
+    path: '/note',
+    name: 'Note',
+    component: Note
+  },
+  {
+    // 404
     path: '*',
     name: 'NotFound',
     component: NotFound
