@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import abcjs from 'abcjs'
+import abcjs from 'abcjs';
 
 export default Vue.extend({
   name: 'Abc',
