@@ -2,7 +2,7 @@
   <div class="twonotes">
     <div class="explanation">
       <p>2音間のインターバルに関する問題を出題します。出題範囲を下記から選択できます。</p>
-      <p>2音間のインターバルに関する問題を出題します。出題範囲を下記から選択できます。</p>
+      <p>選択後に出題ボタンを押すと、開始します。</p>
     </div>
 
     <h1>音部記号</h1>
@@ -18,9 +18,9 @@
     </div>
 
     <h1>インターバル</h1>
-    <div v-for="(quality, i) in qualities" :key="i">
-      <input :id="i" type="checkbox" :value="quality.name" v-model="selectedQualities">
-      <label :for="quality.name">{{ quality.viewName }}</label>
+    <div v-for="(interval, i) in intervals" :key="i">
+      <input :id="i" type="checkbox" :value="interval.name" v-model="selectedIntervals">
+      <label :for="interval.name">{{ interval.viewName }}</label>
     </div>
 
     <transition name="modal" appear>
