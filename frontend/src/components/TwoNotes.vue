@@ -5,7 +5,8 @@
       <p>選択後に出題ボタンを押すと、開始します。</p>
     </div>
 
-    <h1>音部記号</h1>
+    <h1 v-on:mouseenter="mouseOn()" v-on:mouseleave="mouseLeave()">音部記号</h1>
+    <p v-if="hoverFlag" id="balloon">音部記号とは、00000のことです。</p>
     <div v-for="(clef, i) in clefs" :key="i">
       <input :id="i" type="checkbox" :value="clef.name" v-model="selectedNotes">
       <label :for="clef.name">{{ clef.viewName }}</label>
@@ -46,6 +47,7 @@ export default Vue.extend({
   name: 'Interval',
   data() {
     return {
+      hoverFlag: false,
       clefs: [
         {
           name: 'treble',
@@ -133,6 +135,14 @@ export default Vue.extend({
       selectedIntervals: [],
     }
   },
+  methods: {
+    mouseOn() {
+      this.hoverFlag = true
+    },
+    mouseLeave() {
+      this.hoverFlag = false
+    }
+  }
 });
 </script>
 
@@ -190,4 +200,17 @@ export default Vue.extend({
       transform: translateY(-20px);
     }
   }
+  .balloon {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+    border-radius: 15px;
+}
+
 </style>
