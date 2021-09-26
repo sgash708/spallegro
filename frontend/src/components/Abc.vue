@@ -19,7 +19,7 @@ export default Vue.extend({
     * 2 四分音符
     * | 小節区切り
     */
-    abcjs.renderAbc("container", "[M:C][K:style=normal][CG]2");
+    abcjs.renderAbc("container", "[M:C][K:style=normal]!mark![CG]2");
   },
 });
 </script>
