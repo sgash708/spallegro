@@ -6,13 +6,20 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import abcjs from 'abcjs'
+import abcjs from 'abcjs';
 
 export default Vue.extend({
   name: 'Abc',
   mounted: function () {
-    // abcjsのレンダリング
-    abcjs.renderAbc("container", "c");
+    /*
+    * abcjsのレンダリング
+    * [M:C] 拍子記号(C)
+    * [K:style=normal] キー設定
+    * [CG] 和音作成(C,G)
+    * 2 四分音符
+    * | 小節区切り
+    */
+    abcjs.renderAbc("container", "[M:C][K:style=normal]!mark![CG]2");
   },
 });
 </script>
