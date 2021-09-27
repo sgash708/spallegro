@@ -13,12 +13,14 @@
     </div>
 
     <h1>音程</h1>
+    <p v-if="hoverFlag" id="balloon">音程とは、00000のことです。</p>
     <div v-for="(quality, i) in qualities" :key="i">
       <input :id="i" type="checkbox" :value="quality.name" v-model="selectedQualities">
       <label :for="quality.name">{{ quality.viewName }}</label>
     </div>
 
     <h1>インターバル</h1>
+    <p v-if="hoverFlag" id="balloon">インターバルとは、00000のことです。</p>
     <div v-for="(interval, i) in intervals" :key="i">
       <input :id="i" type="checkbox" :value="interval.name" v-model="selectedIntervals">
       <label :for="interval.name">{{ interval.viewName }}</label>
