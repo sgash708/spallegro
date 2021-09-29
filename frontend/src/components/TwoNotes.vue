@@ -6,6 +6,7 @@
     </div>
 
     <h1 v-on:mouseenter="mouseOn(1)" v-on:mouseleave="mouseLeave()">音部記号</h1>
+    <!-- TODO: マジックナンバーでイけていない -->
     <p v-if="hoverFlag && 1 == hoverIndex" id="balloon">音部記号とは、00000のことです。</p>
     <div v-for="(clef, i) in clefs" :key="i">
       <input :id="i" type="checkbox" :value="clef.name" v-model="selectedNotes">
@@ -13,6 +14,7 @@
     </div>
 
     <h1 v-on:mouseenter="mouseOn(2)" v-on:mouseleave="mouseLeave()">音程</h1>
+    <!-- TODO: L10と同じ -->
     <p v-if="hoverFlag && 2 == hoverIndex" id="balloon">音程とは、00000のことです。</p>
     <div v-for="(quality, i) in qualities" :key="i">
       <input :id="i" type="checkbox" :value="quality.name" v-model="selectedQualities">
@@ -20,12 +22,14 @@
     </div>
 
     <h1 v-on:mouseenter="mouseOn(3)" v-on:mouseleave="mouseLeave()">インターバル</h1>
+    <!-- TODO: L10と同じ -->
     <p v-if="hoverFlag && 3 == hoverIndex" id="balloon">インターバルとは、00000のことです。</p>
     <div v-for="(interval, i) in intervals" :key="i">
       <input :id="i" type="checkbox" :value="interval.name" v-model="selectedIntervals">
       <label :for="interval.name">{{ interval.viewName }}</label>
     </div>
 
+    <!-- TODO: ここはモーダルにしてクイズを出力する -->
     <!-- <transition name="modal" appear>
       <div class="modal modal-overlay" @click.self="$emit('close')">
         <div class="modal-window">
