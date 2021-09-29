@@ -7,13 +7,14 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
-  import TwoNotes from '@/components/TwoNotes.vue';
+import { Component, Vue } from 'vue-property-decorator';
+import TwoNotes from '@/components/TwoNotes.vue';
 
-  export default Vue.extend({
-    name: 'Interval',
-    components: {
-      TwoNotes,
-    },
-  });
+@Component({
+  components: {
+    TwoNotes
+  }
+})
+
+export default class Interval extends Vue {}
 </script>

@@ -5,12 +5,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { Component, Vue } from 'vue-property-decorator';
 import abcjs from 'abcjs';
 
-export default Vue.extend({
-  name: 'Abc',
-  mounted: function () {
+@Component
+export default class Abc extends Vue{
+  mounted() {
     /*
     * abcjsのレンダリング
     * [M:C] 拍子記号(C)
@@ -20,8 +20,8 @@ export default Vue.extend({
     * | 小節区切り
     */
     abcjs.renderAbc("container", "[M:C][K:style=normal]!mark![CG]2");
-  },
-});
+  }
+}
 </script>
 
 <style scoped>

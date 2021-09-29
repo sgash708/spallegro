@@ -5,14 +5,14 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
-export default Vue.extend({
-  name: 'Top',
-  props: {
-    msg: String,
-  },
-});
+@Component
+export default class Top extends Vue{
+  @Prop({ type: String, default: '' })
+  // REF: https://qiita.com/hellbird1998/items/da7067e5fb09faba1e89
+  msg!: string;
+}
 </script>
 
 <style scoped>
