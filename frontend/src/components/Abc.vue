@@ -10,7 +10,8 @@ import abcjs from 'abcjs';
 
 @Component
 export default class Abc extends Vue{
-  mounted() {
+  // REF: https://qiita.com/ryo2132/items/4d43209ea89ad1297426
+  mounted(): void {
     /*
     * abcjsのレンダリング
     * [M:C] 拍子記号(C)
