@@ -8,13 +8,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import TwoNotes from '../components/TwoNotes.vue';
+import TwoNotes from '@/components/TwoNotes.vue';
 
 @Component({
   components: {
     TwoNotes
   }
 })
-export default class Interval extends Vue {
-}
+
+export default class Interval extends Vue {}
 </script>
