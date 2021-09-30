@@ -6,15 +6,16 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { Component, Vue } from 'vue-property-decorator';
 import Top from '@/components/Top.vue';
 import Abc from '@/components/Abc.vue';
 
-export default Vue.extend({
-  name: 'Home',
+@Component({
   components: {
     Top,
     Abc
-  },
-});
+  }
+})
+
+export default class Home extends Vue{}
 </script>
