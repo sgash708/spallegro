@@ -30,6 +30,19 @@
     "eslint-plugin-vue": "^6.2.2",
     "jest": "^27.2.4",
     "typescript": "~4.1.5",
+    "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.11"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest"
+    },
+    "testURL": "http://localhost:8088/"
   }
 }
