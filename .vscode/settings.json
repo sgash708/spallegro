@@ -1,0 +1,28 @@
+{
+  /**
+   * Debug
+   */
+  "debug.inlineValues": true,
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "debug.openDebug": "openOnSessionStart",
+
+  "files.associations": {
+    "*.vue": "vue",
+    "*.ts": "typescript"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+  },
+  "[vue]": {
+    "editor.formatOnSave": true,
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "editor.insertSpaces": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.tabSize": 2
+  }
+}
