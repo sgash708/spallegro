@@ -11,5 +11,6 @@ describe('Top.vue', () => {
       propsData: { msg }
     })
     expect(wrapper.text()).toMatch(msg)
+    expect(wrapper.html()).toContain(msg)
   })
 })
