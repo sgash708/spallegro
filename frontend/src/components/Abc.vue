@@ -10,17 +10,26 @@ import abcjs from 'abcjs';
 
 @Component
 export default class Abc extends Vue{
+  firstNote = 'C'
+  secondNote = 'G'
+  interval = ''
+
   // REF: https://qiita.com/ryo2132/items/4d43209ea89ad1297426
   mounted(): void {
-    /*
-    * abcjsのレンダリング
-    * [M:C] 拍子記号(C)
-    * [K:style=normal] キー設定
-    * [CG] 和音作成(C,G)
-    * 2 四分音符
-    * | 小節区切り
-    */
-    abcjs.renderAbc("container", "[M:C][K:style=normal]!mark![CG]2");
+    this.renderScore()
+  }
+
+  renderScore(): void {
+    /**
+     * abcjsのレンダリング
+     * [M:C] 拍子記号(C)
+     * [K:style=normal] キー設定
+     * [CG] 和音作成(C,G)
+     * 2 四分音符
+     * | 小節区切り
+     */
+    this.interval = this.firstNote + this.secondNote
+    abcjs.renderAbc('container', `[M:C][K:style=normal][${this.interval}]8`);
   }
 }
 </script>
