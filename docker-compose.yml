@@ -10,3 +10,4 @@ services:
       - ./frontend:/app
     tty: true
     stdin_open: true
+    command: "npm run serve"
