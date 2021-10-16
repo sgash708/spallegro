@@ -8,4 +8,6 @@ RUN apk update \
     && npm install -g @vue/cli \
     && apk add git
 
+RUN npm install
+
 CMD [ "npm", "run", "serve" ]
