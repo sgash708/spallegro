@@ -1,3 +1,7 @@
+ls:
+	docker ps -a
+images:
+	docker images
 build:
 	docker-compose build
 up:
