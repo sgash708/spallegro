@@ -3,7 +3,7 @@ ls:
 images:
 	docker images
 rmi:
-# make rmi xxxxxxxxxxxx
+# make rmi ARG='xxxxxxxxxxxx'
 	docker rmi ${ARG}
 build:
 	docker-compose build
